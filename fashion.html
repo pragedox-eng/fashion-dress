@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dress Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff0f5;
+}
+
+/* Navbar */
+
+nav{
+    background:#ff4d94;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.menu-btn{
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* Side Menu */
+
+.side-menu{
+    height:100%;
+    width:0;
+    position:fixed;
+    top:0;
+    right:0;
+    background:white;
+    overflow-x:hidden;
+    transition:0.4s;
+    box-shadow:-5px 0 15px rgba(0,0,0,0.2);
+    z-index:2000;
+}
+
+.side-menu-content{
+    padding:30px;
+}
+
+.side-menu a{
+    display:block;
+    padding:15px 0;
+    text-decoration:none;
+    color:#ff4d94;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.side-menu a:hover{
+    color:#e60073;
+}
+
+.close-btn{
+    font-size:40px;
+    cursor:pointer;
+    color:#ff4d94;
+    float:right;
+}
+
+.menu-title{
+    color:#ff4d94;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.info{
+    color:#444;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* Hero Section */
+
+.hero{
+    margin-top:80px;
+    height:90vh;
+    background:linear-gradient(
+    rgba(255,77,148,0.7),
+    rgba(255,182,193,0.7)),
+    url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:white;
+    color:#ff4d94;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Products */
+
+.products{
+    padding:80px 50px;
+}
+
+.section-title{
+    text-align:center;
+    color:#ff4d94;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card-content h3{
+    color:#ff4d94;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.buy-btn{
+    background:#ff4d94;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.buy-btn:hover{
+    background:#e60073;
+}
+
+/* Footer */
+
+footer{
+    background:#ff4d94;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav>
+    <div class="logo">Dress Website</div>
+    <div class="menu-btn" onclick="openMenu()">☰</div>
+</nav>
+
+<!-- Side Menu -->
+
+<div class="side-menu" id="menu">
+
+    <div class="side-menu-content">
+
+        <span class="close-btn" onclick="closeMenu()">×</span>
+
+        <h2 class="menu-title">Menu</h2>
+
+        <a href="#">🏠 Home</a>
+        <a href="#">👗 Collections</a>
+        <a href="#">🛍 New Arrivals</a>
+        <a href="#">⭐ Trending Dresses</a>
+
+        <h2 class="menu-title">About Us</h2>
+        <p class="info">
+            We provide stylish and premium-quality dresses for women.
+            Discover the latest fashion trends with elegant designs.
+        </p>
+
+        <h2 class="menu-title">Contact Details</h2>
+        <p class="info">
+            📞 +91 98765 43210<br>
+            📧 support@dresswebsite.com<br>
+            📍 Chennai, Tamil Nadu, India
+        </p>
+
+        <h2 class="menu-title">Follow Us</h2>
+        <p class="info">
+            📸 Instagram<br>
+            📘 Facebook<br>
+            ▶ YouTube
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Elegant Fashion Collection</h1>
+        <p>Premium Dresses For Every Occasion</p>
+        <a href="https://www.myntra.com" target="_blank" class="btn">
+    Shop Now
+</a>
+    </div>
+
+</section>
+
+<!-- Products -->
+
+<section class="products">
+
+    <h2 class="section-title">Featured Dresses</h2>
+
+    <div class="product-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80">
+            <div class="card-content">
+                <h3>Pink Party Dress</h3>
+                <p class="price">$89</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80">
+            <div class="card-content">
+                <h3>Luxury Gown</h3>
+                <p class="price">$120</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80">
+            <div class="card-content">
+                <h3>Designer Wear</h3>
+                <p class="price">$99</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Dress Website
+</footer>
+
+<script>
+
+function openMenu(){
+    document.getElementById("menu").style.width="320px";
+}
+
+function closeMenu(){
+    document.getElementById("menu").style.width="0";
+}
+
+</script>
+
+</body>
+</html>
